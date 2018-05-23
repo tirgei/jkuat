@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.gelostech.jkuat.activities.StartActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/jkuat_logo"
+        android:id="@+id/logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:id="@+id/start_title"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:textColor="@color/colorBlack"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/start_title"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:animateLayoutChanges="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_level_of_study"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            style="@style/spinner_style"
+            android:spinnerMode="dialog"
+            android:entries="@array/level_of_study"
+            android:layout_marginRight="20dp"
+            android:id="@+id/select_level">
+        </Spinner>
+
+        <TextView
+            android:id="@+id/select_year_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@string/select_year_of_study"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            style="@style/spinner_style"
+            android:visibility="gone"
+            android:spinnerMode="dialog"
+            android:entries="@array/year_of_study"
+            android:layout_marginRight="20dp"
+            android:id="@+id/select_year">
+        </Spinner>
+
+        <TextView
+            android:id="@+id/select_dip_year_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@string/select_year_of_study"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            style="@style/spinner_style"
+            android:visibility="gone"
+            android:spinnerMode="dialog"
+            android:entries="@array/dip_year_of_study"
+            android:layout_marginRight="20dp"
+            android:id="@+id/select_dip_year">
+        </Spinner>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/button_select"
+            android:text="SELECT"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+</RelativeLayout>
